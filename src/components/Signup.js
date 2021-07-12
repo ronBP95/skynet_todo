@@ -46,11 +46,22 @@ const Signup = () => {
 
     return (
         <div>
+            <p>Signup Component loaded!</p>
             <h2>Signup</h2>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="name">Name</label>
+                    <input type="text" name="name" value={name} onChange={handleName} className="form-control" />
                 </div>
+                <div className="form-group">
+                    <label htmlFor="email">Email</label>
+                    <input type="email" name="email" value={email} onChange={handleEmail} className="form-control" />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="password">Password</label>
+                    <input type="password" name="password" value={password} onChange={handlePassword} className="form-control" />
+                </div>
+                <button type="submit">Submit</button>
             </form>
         </div>
     );
